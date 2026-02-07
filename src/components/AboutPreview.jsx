@@ -71,9 +71,9 @@ const AboutPreview = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                                 {[
                                     "Values-based education",
-                                    "World-class infrastructure",
+                                    "Modern infrastructure",
                                     "Individual mentorship",
-                                    "Global exposure"
+                                    "Overall development"
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3 group">
                                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition-colors duration-300">

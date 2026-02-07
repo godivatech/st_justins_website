@@ -10,7 +10,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-2xl font-heading font-bold mb-6 text-white">St. Justin's</h3>
                         <p className="text-gray-300 leading-relaxed mb-6">
-                            Empowering students with knowledge, character, and skills for a bright future. A premium institution committed to excellence in education.
+                            Empowering students with knowledge, character, and skills for a bright future. An institution committed to excellence in education.
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Facebook size={20} /></a>

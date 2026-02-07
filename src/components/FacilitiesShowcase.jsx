@@ -63,7 +63,7 @@ const FacilitiesShowcase = () => {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl">
-                        <h4 className="text-accent font-bold tracking-widest uppercase text-xs mb-3">World-Class Infrastructure</h4>
+                        <h4 className="text-accent font-bold tracking-widest uppercase text-xs mb-3">Modern Infrastructure</h4>
                         <h2 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">
                             Campus <span className="italic text-accent">Highlights</span>
                         </h2>

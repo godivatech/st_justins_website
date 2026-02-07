@@ -39,7 +39,7 @@ const About = () => {
                         About St. Justin's
                     </motion.h1>
                     <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                        A tradition of excellence, a future of limitless possibilities.
+                        A tradition of excellence, a future of bright possibilities.
                     </p>
                 </div>
             </section>
@@ -57,10 +57,10 @@ const About = () => {
                                 A Legacy of <br /> <span className="text-accent">Educational Excellence</span>
                             </h2>
                             <p className="text-lg text-gray-600 leading-relaxed text-justify">
-                                St. Justin's Matriculation Higher Secondary School, established in <span className="font-bold text-primary">1974</span> by the Presentation Sisters, is a premier co-educational institution located on Madurai Road, Sivagangai.
+                                St. Justin's Matriculation Higher Secondary School, established in <span className="font-bold text-primary">1974</span> by the Presentation Sisters, is a co-educational institution located on Madurai Road, Sivagangai.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed text-justify">
-                                Affiliated with the Tamil Nadu Board of Higher Secondary Education, we have been serving the community for over five decades. Our mission is to combat illiteracy and poverty by providing a holistic education that blends academic rigor with moral integrity.
+                                Affiliated with the Tamil Nadu Board of Higher Secondary Education, we have been serving the community for over five decades. Our mission is to combat illiteracy and poverty by providing a complete education that blends academic rigor with moral integrity.
                             </p>
 
                             <div className="grid grid-cols-2 gap-6 pt-6">

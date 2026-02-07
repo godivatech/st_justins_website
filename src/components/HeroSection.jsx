@@ -64,7 +64,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-6 text-lg md:text-xl md:max-w-2xl text-gray-200 font-light leading-relaxed drop-shadow-md"
                 >
-                    Experience holistic education at St. Justin's Matriculation Higher Secondary School, where innovation meets tradition to cultivate the leaders of tomorrow.
+                    Experience complete education at St. Justin's Matriculation Higher Secondary School, where innovation meets tradition to cultivate the leaders of tomorrow.
                 </motion.p>
 
                 {/* CTA Buttons */}
