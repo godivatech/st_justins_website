@@ -91,10 +91,11 @@ const Navbar = () => {
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-y-0 right-0 w-3/4 max-w-sm bg-white shadow-2xl z-50 p-8 lg:hidden flex flex-col"
+                        className="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl z-[100] p-6 lg:hidden flex flex-col h-screen overflow-y-auto"
                     >
-                        <div className="flex justify-end mb-8">
-                            <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-primary">
+                        <div className="flex justify-between items-center mb-8">
+                            <div className="text-xl font-bold text-primary">Menu</div>
+                            <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-gray-500 hover:text-primary transition-colors">
                                 <X size={28} />
                             </button>
                         </div>
@@ -103,7 +104,7 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     to={link.path}
-                                    className={`text-xl font-medium transition-colors hover:text-accent ${location.pathname === link.path ? 'text-primary font-bold' : 'text-gray-700'
+                                    className={`text-lg font-medium transition-colors hover:text-accent ${location.pathname === link.path ? 'text-primary font-bold bg-primary/5 px-4 py-2 rounded-lg' : 'text-gray-700 px-4 py-2'
                                         }`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
@@ -112,7 +113,7 @@ const Navbar = () => {
                             ))}
                             <Link
                                 to="/admissions"
-                                className="mt-4 px-6 py-3 bg-primary text-white text-center rounded-lg font-medium shadow-md hover:bg-primary-dark transition-colors"
+                                className="mt-4 mx-4 px-6 py-3 bg-primary text-white text-center rounded-lg font-medium shadow-md hover:bg-primary-dark transition-colors"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Apply Now
@@ -130,7 +131,7 @@ const Navbar = () => {
                         animate={{ opacity: 0.5 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="fixed inset-0 bg-black z-40 lg:hidden"
+                        className="fixed inset-0 bg-black z-[90] lg:hidden"
                     />
                 )}
             </AnimatePresence>

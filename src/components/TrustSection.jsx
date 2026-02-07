@@ -28,7 +28,6 @@ const features = [
         gradient: "from-green-500 to-emerald-500"
     }
 ];
-
 const TrustSection = () => {
     return (
         <section className="relative px-4 py-16 bg-background-light">
