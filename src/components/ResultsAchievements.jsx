@@ -3,16 +3,22 @@ import { motion } from 'framer-motion';
 import { Trophy, Star, Award, TrendingUp } from 'lucide-react';
 
 const stats = [
-    { label: 'School Topper (HSC)', value: '576', total: '/600', icon: <Trophy className="w-6 h-6 text-yellow-400" />, desc: 'Hari K.' },
-    { label: 'School Topper (SSLC)', value: '494', total: '/500', icon: <Star className="w-6 h-6 text-yellow-400" />, desc: 'Alin Raana' },
+    { label: 'School Topper (HSC)', value: '574', total: '/600', icon: <Trophy className="w-6 h-6 text-yellow-400" />, desc: 'Thavasree .S' },
+    { label: 'School Topper (SSLC)', value: '494', total: '/500', icon: <Star className="w-6 h-6 text-yellow-400" />, desc: 'Aslin Rihana .S' },
     { label: 'Pass Percentage', value: '100', total: '%', icon: <TrendingUp className="w-6 h-6 text-blue-400" />, desc: 'Consistent Record' },
     { label: 'University Placements', value: '95', total: '%', icon: <Award className="w-6 h-6 text-purple-400" />, desc: 'Top Colleges' }
 ];
 
 const toppers = [
-    { name: 'Hari K.', score: '576/600', grade: 'HSC Topper', rank: 1 },
-    { name: 'Alin Raana', score: '494/500', grade: 'SSLC Topper', rank: 1 },
-    { name: 'S. Nithya', score: '570/600', grade: 'HSC - 2nd Rank', rank: 2 }
+    { name: 'Thavasree .S', score: '574/600', grade: 'HSC Topper (2023-24)', rank: 1 },
+    { name: 'Aslin Rihana .S', score: '494/500', grade: 'SSLC Topper (2023-24)', rank: 1 },
+    { name: 'Idhaya Jeffrin .B', score: '576/600', grade: 'HSC Topper (2022-23)', rank: 2 } // Keep previous year as 2nd highlight
+];
+
+const hallOfFame = [
+    "Vedha Vidya .S (1145/1200)", "Leo Michael Kewin .L (1138/1200)", "Swarnalatha .A (1132/1200)",
+    "Mohamed Anas .JK (1129/1200)", "Joyson Raja Singh .N (1069/1200)",
+    "Sheik Abdullah (97%)", "Rubanraj (94%)", "Girisanthini (100%)"
 ];
 
 const CountUp = ({ to }) => {
@@ -77,11 +83,11 @@ const ResultsAchievements = () => {
                 <div className="relative">
                     <h3 className="text-2xl font-bold text-center mb-12 flex items-center justify-center gap-4">
                         <span className="h-px w-12 bg-white/20"></span>
-                        Star Performers - 2024
+                        Star Performers
                         <span className="h-px w-12 bg-white/20"></span>
                     </h3>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
                         {toppers.map((student, index) => (
                             <motion.div
                                 key={index}
@@ -103,7 +109,9 @@ const ResultsAchievements = () => {
                                     <div className="w-28 h-28 mx-auto mb-6 relative">
                                         <div className={`absolute inset-0 rounded-full border-2 ${student.rank === 1 ? 'border-yellow-400' : 'border-gray-300'} animate-spin-slow opacity-50`} style={{ animationDuration: '10s' }} />
                                         {/* Empty White Avatar Placeholder */}
-                                        <div className="w-full h-full rounded-full bg-white/80 border-4 border-white/10 backdrop-blur-sm" />
+                                        <div className="w-full h-full rounded-full bg-white/80 border-4 border-white/10 backdrop-blur-sm flex items-center justify-center">
+                                            <span className="text-3xl font-bold text-gray-300">{student.name.charAt(0)}</span>
+                                        </div>
 
                                         <div className={`absolute -bottom-2 inset-x-0 w-8 h-8 mx-auto flex items-center justify-center rounded-full ${student.rank === 1 ? 'bg-yellow-400 text-primary-dark' : 'bg-gray-300 text-gray-800'} shadow-lg text-xs font-bold`}>
                                             {student.rank === 1 ? <Trophy size={14} /> : <Award size={14} />}
@@ -119,6 +127,24 @@ const ResultsAchievements = () => {
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+
+                    {/* Hall of Fame Ticker */}
+                    <div className="border-t border-white/10 pt-8">
+                        <div className="flex overflow-hidden">
+                            <motion.div
+                                className="flex gap-12 whitespace-nowrap"
+                                animate={{ x: ["0%", "-50%"] }}
+                                transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
+                            >
+                                {[...hallOfFame, ...hallOfFame].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-2 text-blue-200/80">
+                                        <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                                        <span className="font-medium tracking-wide">{item}</span>
+                                    </div>
+                                ))}
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>

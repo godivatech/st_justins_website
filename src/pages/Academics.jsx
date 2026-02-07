@@ -137,6 +137,61 @@ const Academics = () => {
                 </AnimatePresence>
             </div>
 
+            {/* Legacy of Excellence - Results Table */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <span className="text-accent font-bold tracking-wider uppercase text-sm">Hall of Fame</span>
+                        <h2 className="text-4xl font-heading font-bold text-primary mt-2">Legacy of Excellence</h2>
+                        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                            A testament to our consistent academic performance over the years.
+                        </p>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-primary text-white">
+                                        <th className="p-4 font-bold border-b border-white/10">Year</th>
+                                        <th className="p-4 font-bold border-b border-white/10">Student Name</th>
+                                        <th className="p-4 font-bold border-b border-white/10">Standard</th>
+                                        <th className="p-4 font-bold border-b border-white/10 text-right">Marks / %</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-gray-700">
+                                    {[
+                                        { year: '2023-24', name: 'Thavasree .S', std: 'XII', marks: '574 / 600' },
+                                        { year: '2023-24', name: 'Aslin Rihana .S', std: 'X', marks: '494 / 500' },
+                                        { year: '2022-23', name: 'Idhaya Jeffrin .B', std: 'XII', marks: '576 / 600' },
+                                        { year: '2022-23', name: 'Nishalini .K', std: 'X', marks: '491 / 500' },
+                                        { year: '2021-22', name: 'Gopika .K', std: 'XII', marks: '583 / 600' },
+                                        { year: '2021-22', name: 'Varanya Devi .M', std: 'X', marks: '470 / 500' },
+                                        { year: '2017-18', name: 'Vedha Vidya .S', std: 'XII', marks: '1145 / 1200' },
+                                        { year: '2016-17', name: 'Mohamed Anas .JK', std: 'XII', marks: '1129 / 1200' },
+                                        { year: '2015-16', name: 'Leo Michael Kewin .L', std: 'XII', marks: '1138 / 1200' },
+                                    ].map((row, i) => (
+                                        <tr key={i} className={`hover:bg-blue-50 transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                                            <td className="p-4 border-b border-gray-100 font-medium text-gray-500">{row.year}</td>
+                                            <td className="p-4 border-b border-gray-100 font-bold text-primary">{row.name}</td>
+                                            <td className="p-4 border-b border-gray-100">
+                                                <span className={`inline-block px-2 py-1 rounded text-xs font-bold ${row.std === 'XII' ? 'bg-purple-100 text-purple-700' : 'bg-green-100 text-green-700'}`}>
+                                                    {row.std}
+                                                </span>
+                                            </td>
+                                            <td className="p-4 border-b border-gray-100 text-right font-bold text-gray-800">{row.marks}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="p-4 text-center bg-gray-50 border-t border-gray-100">
+                            <p className="text-sm text-gray-500">Showing recent top achievers. Complete records available at school office.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Beyond Academics - Co-Curricular Section */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
