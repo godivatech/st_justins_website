@@ -14,7 +14,10 @@ const HeroSection = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    preload="auto"
+                    poster="/assets/images/hero-poster.jpg" // Add a poster image if available, else user should add one
+                    className="w-full h-full object-cover transition-opacity duration-1000"
+                    onLoadedData={(e) => e.target.classList.remove('opacity-0')}
                 >
                     <source src="/assets/hero-bg.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
